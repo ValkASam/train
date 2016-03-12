@@ -1,0 +1,21 @@
+Дан код:
+public interface A { 
+    String text = "a"; 
+} 
+ 
+public interface B { 
+    String text = "b"; 
+} 
+ 
+public class С implements A, B {
+    public static void main(String[] args) { 
+        System.out.println(С.text);
+    } 
+} 
+Какое значение приймет переменная text в классе С? Что выведется на экран?
+Error:(8, 29) java: reference to text is ambiguous
+  both variable text in interfaceClass2.A and variable text in interfaceClass2.B match
+
+Правильно
+    System.out.println(((A) new C()).text);
+    System.out.println(((B) new C()).text);

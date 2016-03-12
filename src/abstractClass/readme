@@ -1,0 +1,21 @@
+abstract class A{
+    public abstract void print();
+}
+class B extends A{
+    public void print(){
+        System.out.println("B");
+    }
+}
+Можно ли унаследовать от класса B абстрактный класс?
+
+Если да, то что нужно сделать с методом print():
+ - его обязательно надо переопределить? - не обязательно:
+public abstract class C extends B {
+}
+
+ - можно ли его определить как abstract? - можно
+public class B extends A {
+    public void print(){
+        System.out.println("B");
+    }
+}

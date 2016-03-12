@@ -1,0 +1,9 @@
+Измените код так, чтобы он вернул hello world на консоль.
+public class NullReferenceTest { 
+   //..... 
+    public static void main(String[] args) { 
+        NullReferenceTest nullReferenceTest = null; 
+        System.out.println(nullReferenceTest./*<some descriptor>*/); 
+    } 
+} 
+Ограничения - нельзя создавать новые объекты. Нельзя изменять текущий код, можно только добавить немного своего.
